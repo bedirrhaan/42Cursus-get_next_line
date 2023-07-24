@@ -6,7 +6,7 @@
 /*   By: bcopoglu <bcopoglu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 11:24:10 by bcopoglu          #+#    #+#             */
-/*   Updated: 2023/07/24 16:35:54 by bcopoglu         ###   ########.fr       */
+/*   Updated: 2023/07/24 18:02:31 by bcopoglu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 4
+#  define BUFFER_SIZE 30
 # endif
 
 char	*get_next_line(int fd);
