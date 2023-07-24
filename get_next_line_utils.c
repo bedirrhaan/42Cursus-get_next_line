@@ -6,7 +6,7 @@
 /*   By: bcopoglu <bcopoglu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 17:07:24 by bcopoglu          #+#    #+#             */
-/*   Updated: 2023/07/23 17:07:24 by bcopoglu         ###   ########.fr       */
+/*   Updated: 2023/07/24 14:06:24 by bcopoglu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,20 +102,8 @@ void	*ft_free_stash(char **stash, int create_line)
 	if (!*stash)
 		return (NULL);
 	if (create_line == 0)
-	{
-		if (*stash)
-		{
-			free(*stash);
-			*stash = NULL;
-		}
-		return (NULL);
-	}
+		return (free(*stash), *stash = NULL);
 	else if (create_line == 1)
-	{
-		line = ft_strdup(*stash);
-		free(*stash);
-		*stash = NULL;
-		return (line);
-	}
+		return (line = ft_strdup(*stash), free(*stash), *stash = NULL, line);
 	return (NULL);
 }
